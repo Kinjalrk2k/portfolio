@@ -1,9 +1,11 @@
 import React from "react";
 import { connect } from "react-redux";
 
-import { Heading } from "@chakra-ui/react";
+import { Container } from "@chakra-ui/react";
 
 import { fetchData } from "../actions";
+
+import About from "./About";
 
 class App extends React.Component {
   componentDidMount() {
@@ -12,7 +14,11 @@ class App extends React.Component {
 
   render() {
     console.log(this.props.data);
-    return <Heading>App</Heading>;
+    return (
+      <Container maxW="container.lg" marginTop={5}>
+        <About />
+      </Container>
+    );
   }
 }
 
