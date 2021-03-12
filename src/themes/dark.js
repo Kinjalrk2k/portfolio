@@ -5,6 +5,10 @@ const theme = extendTheme({
     useSystemColorMode: true,
     initialColorMode: "dark",
   },
+  fonts: {
+    heading: "Jetbrains Mono",
+    body: "Jetbrains Mono",
+  },
 });
 
 export default theme;

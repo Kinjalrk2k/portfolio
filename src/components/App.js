@@ -1,6 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
 
+import { Heading } from "@chakra-ui/react";
+
 import { fetchData } from "../actions";
 
 class App extends React.Component {
@@ -10,7 +12,7 @@ class App extends React.Component {
 
   render() {
     console.log(this.props.data);
-    return <div>App</div>;
+    return <Heading>App</Heading>;
   }
 }
 
