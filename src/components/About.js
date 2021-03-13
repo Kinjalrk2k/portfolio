@@ -11,7 +11,7 @@ import {
 
 import CommentedHeading from "./partials/CommentedHeading";
 
-const About = () => {
+const About = (props) => {
   return (
     <div>
       <CommentedHeading body="About Me" />
@@ -24,17 +24,13 @@ const About = () => {
             mt="2"
             textAlign={{ base: "center", md: "left" }}
           >
-            Kinjal Raykarmakar
+            {props.name}
           </Heading>
           <Heading color="green.400" mt="3" mb="5">
-            Backend Developer
+            {props.designation}
           </Heading>
           <Text color="red.100" align="justify">
-            After done being an Undergrad Engineering student of the Junior
-            (3rd) Year, I love to solve problems through developing software.
-            I'm always exploring new ways and technologies. Digging code,
-            laughing at memes and writing my personal journal are constants from
-            the universal set of hobbies! Physics and Space make me nerdy.
+            {props.summary}
           </Text>
         </Box>
         <Spacer />

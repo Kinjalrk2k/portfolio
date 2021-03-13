@@ -1,5 +1,7 @@
 {
-  "basicDetails": {
-    "name": "Kinjal Raykarmakar"
+  "about": {
+    "name": "Kinjal Raykarmakar",
+    "designation": "Backend Developer",
+    "summary": "3rd-year Computer Science Engineering Undergraduate and Backend Developer Intern at UNIGO Cabs. A problem-solver who learns almost every day! Experienced in developing RESTful APIs for Web/Mobile Apps using JavaScript and software using Python, alongside Java, C and C++. Digging code, folding paper and writing my journal are constants from the universal set of hobbies! Physics and Space make me nerdy."
   }
 }

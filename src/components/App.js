@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 
-import { Container } from "@chakra-ui/react";
+import { Container, Spinner } from "@chakra-ui/react";
 
 import { fetchData } from "../actions";
 
@@ -13,12 +13,28 @@ class App extends React.Component {
   }
 
   render() {
-    console.log(this.props.data);
-    return (
-      <Container maxW="container.lg" marginTop={5}>
-        <About />
-      </Container>
-    );
+    if (this.props.data) {
+      const { name, designation, summary } = this.props.data.about;
+      return (
+        <Container maxW="container.lg" marginTop={5}>
+          <About name={name} designation={designation} summary={summary} />
+        </Container>
+      );
+    } else {
+      return (
+        <div
+          style={{
+            width: "100vw",
+            height: "100vh",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <Spinner size="xl" />
+        </div>
+      );
+    }
   }
 }
 

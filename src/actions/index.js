@@ -7,8 +7,10 @@ export const fetchData = () => async (dispatch) => {
   //   .once("value")
   //   .then((snapshot) => snapshot.val());
 
-  dispatch({
-    type: "FETCH_DATA",
-    payload: data,
-  });
+  setTimeout(() => {
+    dispatch({
+      type: "FETCH_DATA",
+      payload: data,
+    });
+  }, 1000);
 };
