@@ -6,6 +6,9 @@ import { Container, Spinner } from "@chakra-ui/react";
 import { fetchData } from "../actions";
 
 import About from "./About";
+import Education from "./Education";
+
+import "./App.css";
 
 class App extends React.Component {
   componentDidMount() {
@@ -18,6 +21,7 @@ class App extends React.Component {
       return (
         <Container maxW="container.lg" marginTop={5}>
           <About name={name} designation={designation} summary={summary} />
+          <Education />
         </Container>
       );
     } else {
