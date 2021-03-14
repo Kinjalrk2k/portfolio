@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 
 import { Container, Spinner } from "@chakra-ui/react";
 
-import { fetchData } from "../actions";
+import { fetchData } from "../actions/data";
 
 import About from "./About";
 import Education from "./Education";

@@ -1,12 +1,5 @@
 import { combineReducers } from "redux";
+import dataReducer from "./data";
+import authReducer from "./auth";
 
-const dataReducer = (state = null, action) => {
-  switch (action.type) {
-    case "FETCH_DATA":
-      return action.payload;
-    default:
-      return state;
-  }
-};
-
-export default combineReducers({ data: dataReducer });
+export default combineReducers({ data: dataReducer, auth: authReducer });
