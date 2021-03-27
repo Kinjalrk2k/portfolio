@@ -1,8 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 
-import { signIn, alreadySignedIn, logout } from "../../actions/auth";
-import { auth } from "../../services/firebase";
+import { signIn, alreadySignedIn } from "../../actions/auth";
 
 import {
   FormControl,
@@ -14,7 +13,10 @@ import {
   Heading,
   Text,
   Spinner,
+  Container,
 } from "@chakra-ui/react";
+
+import AdminDrawer from "./AdminDrawer";
 
 class Admin extends React.Component {
   state = {
@@ -34,10 +36,6 @@ class Admin extends React.Component {
     const email = formData.get("email");
     const password = formData.get("password");
     this.props.signIn(email, password);
-  }
-
-  onLogoutClick(e) {
-    this.props.logout();
   }
 
   renderLoginForm() {
@@ -79,7 +77,9 @@ class Admin extends React.Component {
   renderAdminDashboard() {
     return (
       <div>
-        <Button onClick={() => this.onLogoutClick()}>Sign Out</Button>
+        <Container maxW="100vw" mt={3}>
+          <AdminDrawer />
+        </Container>
       </div>
     );
   }
@@ -117,5 +117,4 @@ const mapStateToProps = (state) => {
 export default connect(mapStateToProps, {
   signIn,
   alreadySignedIn,
-  logout,
 })(Admin);
