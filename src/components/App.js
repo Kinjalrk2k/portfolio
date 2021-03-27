@@ -17,10 +17,9 @@ class App extends React.Component {
 
   render() {
     if (this.props.data) {
-      const { name, designation, summary } = this.props.data.about;
       return (
         <Container maxW="container.lg" marginTop={5}>
-          <About name={name} designation={designation} summary={summary} />
+          <About />
           <Education />
         </Container>
       );

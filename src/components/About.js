@@ -1,4 +1,6 @@
 import React from "react";
+import { connect } from "react-redux";
+
 import {
   Heading,
   Image,
@@ -24,13 +26,13 @@ const About = (props) => {
             mt="2"
             textAlign={{ base: "center", md: "left" }}
           >
-            {props.name}
+            {props.about.name}
           </Heading>
           <Heading color="green.400" mt="3" mb="5">
-            {props.designation}
+            {props.about.designation}
           </Heading>
           <Text color="red.100" align="justify">
-            {props.summary}
+            {props.about.summary}
           </Text>
         </Box>
         <Spacer />
@@ -47,4 +49,8 @@ const About = (props) => {
   );
 };
 
-export default About;
+const mapStateToProps = (state) => {
+  return { about: state.data.about };
+};
+
+export default connect(mapStateToProps)(About);
