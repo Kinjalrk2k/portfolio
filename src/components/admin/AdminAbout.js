@@ -13,10 +13,13 @@ import {
   Spinner,
   Textarea,
 } from "@chakra-ui/react";
+
+import { editAbout } from "../../actions/admin";
 class AdminAbout extends React.Component {
-  handleSubmit(values) {
-    console.log(values);
-  }
+  handleSubmit = async (values, actions) => {
+    await this.props.editAbout(values);
+    actions.setSubmitting(false);
+  };
 
   renderForm() {
     return (
@@ -115,4 +118,4 @@ const mapStateToProps = (state) => {
   }
 };
 
-export default connect(mapStateToProps)(AdminAbout);
+export default connect(mapStateToProps, { editAbout })(AdminAbout);
