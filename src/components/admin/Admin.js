@@ -17,6 +17,7 @@ import {
 } from "@chakra-ui/react";
 
 import AdminDrawer from "./AdminDrawer";
+import AdminAbout from "./AdminAbout";
 
 class Admin extends React.Component {
   state = {
@@ -78,7 +79,18 @@ class Admin extends React.Component {
     return (
       <div>
         <Container maxW="100vw" mt={3}>
-          <AdminDrawer />
+          <Flex>
+            <AdminDrawer />
+            <Text
+              fontSize="3xl"
+              textAlign="center"
+              flexGrow={1}
+              letterSpacing={20}
+            >
+              ADMIN PANEL
+            </Text>
+          </Flex>
+          <AdminAbout />
         </Container>
       </div>
     );
