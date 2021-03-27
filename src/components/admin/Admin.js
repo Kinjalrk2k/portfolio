@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 
 import { signIn, alreadySignedIn } from "../../actions/auth";
+import { fetchData } from "../../actions/data";
 
 import {
   FormControl,
@@ -23,6 +24,10 @@ class Admin extends React.Component {
   state = {
     isSubmitBtnClicked: false,
   };
+
+  componentDidMount() {
+    this.props.fetchData();
+  }
 
   constructor(props) {
     super(props);
@@ -123,10 +128,11 @@ class Admin extends React.Component {
 
 const mapStateToProps = (state) => {
   console.log(state);
-  return { auth: state.auth };
+  return { auth: state.auth, data: state.data };
 };
 
 export default connect(mapStateToProps, {
   signIn,
   alreadySignedIn,
+  fetchData,
 })(Admin);
