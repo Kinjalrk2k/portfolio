@@ -83,7 +83,7 @@ class Admin extends React.Component {
   renderAdminDashboard() {
     return (
       <div>
-        <Container maxW="100vw" mt={3}>
+        <Container maxW="container.xl" mt={3}>
           <Flex>
             <AdminDrawer />
             <Text
