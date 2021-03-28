@@ -40,8 +40,8 @@ const About = (props) => {
           <Image
             borderRadius="full"
             boxSize="150px"
-            src="https://avatars.githubusercontent.com/u/34955854?s=460&u=fe89bd3d58fff60867dc0937fe3017b253399954&v=4"
-            alt="Segun Adebayo"
+            src={props.about.profilePic}
+            alt={props.about.name}
           />
         </Center>
       </Flex>
