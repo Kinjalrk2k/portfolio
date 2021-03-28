@@ -1,4 +1,4 @@
-import { db } from "../services/firebase";
+import { db, storage } from "../services/firebase";
 // import data from "../data/data.json";
 
 export const fetchData = () => async (dispatch) => {
