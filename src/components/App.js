@@ -7,6 +7,7 @@ import { fetchData } from "../actions/data";
 
 import About from "./About";
 import Education from "./Education";
+import Skills from "./Skills";
 
 import "./App.css";
 
@@ -21,6 +22,7 @@ class App extends React.Component {
         <Container maxW="container.lg" marginTop={5}>
           <About />
           <Education />
+          <Skills />
         </Container>
       );
     } else {
