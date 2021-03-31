@@ -1,4 +1,5 @@
 import React from "react";
+import { connect } from "react-redux";
 
 import CommentedHeading from "./partials/CommentedHeading";
 
@@ -6,7 +7,7 @@ import { Flex, Box, Spacer, Heading, Text } from "@chakra-ui/react";
 import { ArrowForwardIcon, ArrowDownIcon } from "@chakra-ui/icons";
 import { FaSchool, FaUniversity } from "react-icons/fa";
 
-const Education = () => {
+const Education = (props) => {
   return (
     <div className="section">
       <CommentedHeading body="Education" />
@@ -23,16 +24,13 @@ const Education = () => {
               />
             </h1>
             <Heading as="h3" size="lg">
-              B.D.M. International
+              {props.education.school.name}
             </Heading>
           </Box>
           <Text color="gray.500" mb={2}>
-            AISCE(2016) | AISSCE(2018)
+            {props.education.school.period}
           </Text>
-          <Text>
-            Basic Studies till Class X, followed by Science (Physics, Chemistry,
-            Mathematics, Computer Science) in Classes XI and XII
-          </Text>
+          <Text>{props.education.school.details}</Text>
         </Box>
 
         <Spacer />
@@ -51,7 +49,7 @@ const Education = () => {
         <Box w={{ base: "100%", md: "40%" }}>
           <Box display="flex" mb={3}>
             <Heading as="h3" size="lg" textAlign="right">
-              University of Engineering and Management
+              {props.education.college.name}
             </Heading>
             <h1 className="eduLogo">
               <FaUniversity
@@ -60,15 +58,17 @@ const Education = () => {
             </h1>
           </Box>
           <Text textAlign="right" color="gray.500" mb={2}>
-            2018 - 2022
+            {props.education.college.period}
           </Text>
-          <Text textAlign="right">
-            Pursuing Bachelor of Techonology in Computer Science Engineering
-          </Text>
+          <Text textAlign="right">{props.education.college.details}</Text>
         </Box>
       </Flex>
     </div>
   );
 };
 
-export default Education;
+const mapStateToProps = (state) => {
+  return { education: state.data.education };
+};
+
+export default connect(mapStateToProps)(Education);
