@@ -8,6 +8,7 @@ import { fetchData } from "../actions/data";
 import About from "./About";
 import Education from "./Education";
 import Skills from "./Skills";
+import WorkExperience from "./WorkExperience";
 
 import "./App.css";
 
@@ -23,6 +24,7 @@ class App extends React.Component {
           <About />
           <Education />
           <Skills />
+          <WorkExperience />
         </Container>
       );
     } else {
