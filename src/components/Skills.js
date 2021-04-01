@@ -5,38 +5,25 @@ import { Doughnut } from "react-chartjs-2";
 import CommentedHeading from "./partials/CommentedHeading";
 import DoughnutChart from "./partials/DoughnutChart";
 
-const randomColors = (n) => {
-  const colors = [];
-  for (let j = 0; j < n; j++) {
-    const letters = "0123456789ABCDEF".split("");
-    let color = "#";
-    for (let i = 0; i < 6; i++) {
-      color += letters[Math.floor(Math.random() * 16)];
-    }
-
-    colors.push(color);
-  }
-
-  return colors;
-};
-
-const data = {
-  labels: ["Red", "Green", "Yellow"],
-  datasets: [
-    {
-      data: [300, 50, 100],
-      backgroundColor: randomColors(3),
-    },
-  ],
-};
+import { Wrap, WrapItem, Box, Flex } from "@chakra-ui/react";
 
 const Skills = (props) => {
   return (
     <div className="section">
       <CommentedHeading body="Skills" />
-      <DoughnutChart data={data} />
+      <Wrap style={{ justifyContent: "center" }}>
+        <DoughnutChart dataObj={props.skills.backend} chartName={"Backend"} />
+        <DoughnutChart dataObj={props.skills.database} chartName={"Database"} />
+        <DoughnutChart dataObj={props.skills.frontend} chartName={"Frontend"} />
+        <DoughnutChart dataObj={props.skills.python} chartName={"Python"} />
+        <DoughnutChart dataObj={props.skills.others} chartName={"Others"} />
+      </Wrap>
     </div>
   );
 };
 
-export default Skills;
+const mapStateToProps = (state) => {
+  return { skills: state.data.skills };
+};
+
+export default connect(mapStateToProps)(Skills);
