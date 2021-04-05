@@ -22,12 +22,13 @@ import {
 
 import { AiFillApi } from "react-icons/ai";
 import { MdCheckCircle, MdWork } from "react-icons/md";
+import * as si from "react-icons/si";
 
 class WorkExperience extends React.Component {
   onGoingBadge(work) {
     if (work.isOngoing) {
       return (
-        <Badge fontSize="0.7em" ml={2} colorScheme="purple">
+        <Badge fontSize="0.7em" ml={2} p={2} colorScheme="green">
           Ongoing
         </Badge>
       );
@@ -46,16 +47,37 @@ class WorkExperience extends React.Component {
     });
   }
 
+  renderTech(tech) {
+    return tech.map((t) => {
+      return (
+        <div style={{ marginLeft: "15px" }}>{React.createElement(si[t])}</div>
+      );
+    });
+  }
+
   renderPositionList(work) {
     return work.positions.map((pos) => {
       return (
         <div>
           <Text fontSize="xl" color="#718096">
             {pos.designation}
+            <br />
+            {pos.date}
           </Text>
-          <List spacing={1} fontSize={14}>
+
+          <List spacing={1} fontSize={14} mt={3} mb={3}>
             {this.renderDetailsList(pos.details)}
           </List>
+
+          <Heading
+            as="h5"
+            fontSize={20}
+            color="#4A5568"
+            d="flex"
+            justifyContent="flex-end"
+          >
+            {this.renderTech(pos.tech)}
+          </Heading>
         </div>
       );
     });
