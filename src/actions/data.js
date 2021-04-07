@@ -1,5 +1,4 @@
-import { db, storage } from "../services/firebase";
-// import data from "../data/data.json";
+import { db } from "../services/firebase";
 
 export const fetchData = () => async (dispatch) => {
   const data = await db
@@ -11,11 +10,4 @@ export const fetchData = () => async (dispatch) => {
     type: "FETCH_DATA",
     payload: data,
   });
-
-  // setTimeout(() => {
-  //   dispatch({
-  //     type: "FETCH_DATA",
-  //     payload: data,
-  //   });
-  // }, 1000);
 };

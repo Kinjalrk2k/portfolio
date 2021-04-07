@@ -10,3 +10,9 @@
 /* .vertical-timeline-element-content {
   background-color: #2d3748;
 } */
+
+.shadowThis {
+  box-shadow: 33px 21px 176px -35px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 33px 21px 176px -35px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 33px 21px 176px -35px rgba(0, 0, 0, 0.75);
+}
