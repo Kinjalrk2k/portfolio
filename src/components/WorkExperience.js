@@ -17,6 +17,8 @@ import {
   ListIcon,
   Button,
   Link,
+  Flex,
+  Image,
   LinkOverlay,
 } from "@chakra-ui/react";
 
@@ -94,10 +96,18 @@ class WorkExperience extends React.Component {
           icon={<MdWork />}
         >
           <div style={{ marginBottom: "15px" }}>
-            <Heading as="h3" size="lg">
-              {work.organization}
-              {this.onGoingBadge(work)}
-            </Heading>
+            <Flex alignItems="center">
+              <Image
+                mr={2}
+                // borderRadius="full"
+                boxSize="40px"
+                src={work.logo}
+              />
+              <Heading as="h3" size="lg">
+                {work.organization}
+                {this.onGoingBadge(work)}
+              </Heading>
+            </Flex>
           </div>
 
           {this.renderPositionList(work)}
