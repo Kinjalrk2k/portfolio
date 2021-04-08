@@ -19,6 +19,7 @@ import {
 
 import AdminDrawer from "./AdminDrawer";
 import AdminAbout from "./AdminAbout";
+import FileUpload from "./FileUpload";
 
 class Admin extends React.Component {
   state = {
@@ -95,7 +96,8 @@ class Admin extends React.Component {
               ADMIN PANEL
             </Text>
           </Flex>
-          <AdminAbout />
+          {/* <AdminAbout /> */}
+          <FileUpload />
         </Container>
       </div>
     );
