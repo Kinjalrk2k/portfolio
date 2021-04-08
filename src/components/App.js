@@ -10,6 +10,7 @@ import Education from "./Education";
 import Skills from "./Skills";
 import WorkExperience from "./WorkExperience";
 import VolunteerExperience from "./VolunteerExperience";
+import Certificates from "./Certificates";
 
 import "./App.css";
 
@@ -27,6 +28,7 @@ class App extends React.Component {
           <Skills />
           <WorkExperience />
           <VolunteerExperience />
+          <Certificates />
         </Container>
       );
     } else {
