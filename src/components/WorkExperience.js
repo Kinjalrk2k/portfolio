@@ -30,7 +30,7 @@ class WorkExperience extends React.Component {
   onGoingBadge(work) {
     if (work.isOngoing) {
       return (
-        <Badge fontSize="0.7em" ml={2} p={2} colorScheme="green">
+        <Badge fontSize="0.7em" ml={2} p={2} colorScheme="purple">
           Ongoing
         </Badge>
       );

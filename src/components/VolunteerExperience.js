@@ -9,6 +9,8 @@ import {
   ListItem,
   ListIcon,
   SimpleGrid,
+  Grid,
+  GridItem,
   Flex,
   Image,
 } from "@chakra-ui/react";
@@ -28,19 +30,27 @@ class VolunteerExperience extends React.Component {
   }
 
   renderCards() {
-    return this.props.volunteerExperience.map((vE) => {
+    return this.props.volunteerExperience.map((vE, idx) => {
       return (
-        <Box className="shadowThis" borderRadius="lg" overflow="hidden" p={5}>
-          <Flex alignItems="center">
-            <Image mr={2} borderRadius="full" boxSize="40px" src={vE.logo} />
-            <Heading as="h4" size="md">
-              {vE.organization}
-            </Heading>
-          </Flex>
-          <List spacing={1} fontSize={14} mt={3} mb={3}>
-            {this.renderDetails(vE.details)}
-          </List>
-        </Box>
+        <GridItem rowSpan={1} colSpan={{ base: 3, md: idx === 0 ? 2 : 1 }}>
+          <Box
+            borderWidth="3px"
+            borderRadius="lg"
+            overflow="hidden"
+            p={5}
+            height="100%"
+          >
+            <Flex alignItems="center">
+              <Image mr={2} borderRadius="full" boxSize="40px" src={vE.logo} />
+              <Heading as="h4" size="md">
+                {vE.organization}
+              </Heading>
+            </Flex>
+            <List spacing={1} fontSize={14} mt={3} mb={3}>
+              {this.renderDetails(vE.details)}
+            </List>
+          </Box>
+        </GridItem>
       );
     });
   }
@@ -50,9 +60,16 @@ class VolunteerExperience extends React.Component {
       <div>
         <CommentedHeading body="Volunteer Experience" />
 
-        <SimpleGrid minChildWidth="300px" spacingX={20} spacingY={10}>
+        {/* <SimpleGrid columns={3} spacing="40px"> */}
+        <Grid
+          h="200px"
+          templateRows="repeat(2, 1fr)"
+          templateColumns="repeat(3, 1fr)"
+          gap={4}
+        >
           {this.renderCards()}
-        </SimpleGrid>
+        </Grid>
+        {/* </SimpleGrid> */}
       </div>
     );
   }
