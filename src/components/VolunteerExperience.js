@@ -60,16 +60,13 @@ class VolunteerExperience extends React.Component {
       <div>
         <CommentedHeading body="Volunteer Experience" />
 
-        {/* <SimpleGrid columns={3} spacing="40px"> */}
         <Grid
-          h="200px"
           templateRows="repeat(2, 1fr)"
           templateColumns="repeat(3, 1fr)"
           gap={4}
         >
           {this.renderCards()}
         </Grid>
-        {/* </SimpleGrid> */}
       </div>
     );
   }
