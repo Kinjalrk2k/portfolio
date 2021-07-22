@@ -1,7 +1,6 @@
-import { connect } from "react-redux";
 import { Doughnut } from "react-chartjs-2";
 import "chartjs-plugin-labels";
-import randomColor from "randomcolor";
+// import randomColor from "randomcolor";
 
 import "./DoughnutChart.css";
 
@@ -17,11 +16,11 @@ function hexToRgb(hex) {
 }
 
 const DoughnutChart = (props) => {
-  const colors = randomColor({
-    luminosity: "random",
-    count: props.dataObj.length,
-    hue: "random",
-  });
+  // const colors = randomColor({
+  //   luminosity: "random",
+  //   count: props.dataObj.length,
+  //   hue: "random",
+  // });
 
   const data = {
     labels: props.dataObj.map((d) => d.name),

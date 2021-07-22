@@ -8,21 +8,16 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 
 import {
-  Box,
   Heading,
   Text,
   Badge,
   List,
   ListItem,
   ListIcon,
-  Button,
-  Link,
   Flex,
   Image,
-  LinkOverlay,
 } from "@chakra-ui/react";
 
-import { AiFillApi } from "react-icons/ai";
 import { MdCheckCircle, MdWork } from "react-icons/md";
 import * as si from "react-icons/si";
 

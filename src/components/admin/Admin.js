@@ -18,7 +18,6 @@ import {
 } from "@chakra-ui/react";
 
 import AdminDrawer from "./AdminDrawer";
-import AdminAbout from "./AdminAbout";
 import FileUpload from "./FileUpload";
 
 class Admin extends React.Component {

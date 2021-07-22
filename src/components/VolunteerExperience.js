@@ -8,7 +8,6 @@ import {
   List,
   ListItem,
   ListIcon,
-  SimpleGrid,
   Grid,
   GridItem,
   Flex,

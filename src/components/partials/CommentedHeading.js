@@ -12,7 +12,7 @@ const CommentedHeading = (props) => {
       // as="i"
       style={{ fontWeight: 800 }}
     >
-      /* {props.body} */
+      {`/* ${props.body} */`}
     </Text>
   );
 };

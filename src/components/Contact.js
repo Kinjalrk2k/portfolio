@@ -1,4 +1,3 @@
-import { ChatIcon } from "@chakra-ui/icons";
 import {
   Button,
   FormControl,
@@ -30,9 +29,9 @@ function Contact() {
 
     console.log(e);
     if (
-      name == "" ||
+      name === "" ||
       !emailRe.test(String(email).toLowerCase()) ||
-      message == ""
+      message === ""
     ) {
       return;
     }
@@ -114,9 +113,9 @@ function Contact() {
             onClick={clickHandle}
             type="submit"
             disabled={
-              name == "" ||
+              name === "" ||
               !emailRe.test(String(email).toLowerCase()) ||
-              message == ""
+              message === ""
             }
           >
             {sendBtnText}

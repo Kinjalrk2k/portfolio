@@ -1,17 +1,13 @@
 import React from "react";
 // import { connect } from "react-redux";
-import { Formik, Field, Form } from "formik";
+import { Formik, Field } from "formik";
 
 import {
-  Box,
-  Text,
   Input,
   Button,
   FormControl,
   FormLabel,
   FormErrorMessage,
-  Spinner,
-  Textarea,
   Flex,
   IconButton,
 } from "@chakra-ui/react";

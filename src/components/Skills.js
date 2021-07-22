@@ -1,11 +1,10 @@
 import React from "react";
 import { connect } from "react-redux";
-import { Doughnut } from "react-chartjs-2";
 
 import CommentedHeading from "./partials/CommentedHeading";
 import DoughnutChart from "./partials/DoughnutChart";
 
-import { Wrap, WrapItem, Box, Flex } from "@chakra-ui/react";
+import { Wrap } from "@chakra-ui/react";
 
 const Skills = (props) => {
   return (
