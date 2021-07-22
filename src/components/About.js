@@ -21,7 +21,7 @@ const About = (props) => {
         <Box order={{ base: 2, md: 0 }}>
           <Heading
             as="h1"
-            size="3xl"
+            size="2xl"
             color="orange.500"
             mt="2"
             textAlign={{ base: "center", md: "left" }}

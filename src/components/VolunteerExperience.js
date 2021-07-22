@@ -32,7 +32,11 @@ class VolunteerExperience extends React.Component {
   renderCards() {
     return this.props.volunteerExperience.map((vE, idx) => {
       return (
-        <GridItem rowSpan={1} colSpan={{ base: 3, md: idx === 0 ? 2 : 1 }}>
+        <GridItem
+          rowSpan={1}
+          colSpan={{ base: 3, md: idx === 0 ? 2 : 1 }}
+          marginTop={{ base: "1rem", md: "initial" }}
+        >
           <Box
             borderWidth="3px"
             borderRadius="lg"
@@ -64,6 +68,7 @@ class VolunteerExperience extends React.Component {
           templateRows="repeat(2, 1fr)"
           templateColumns="repeat(3, 1fr)"
           gap={4}
+          display={{ base: "initial", md: "grid" }}
         >
           {this.renderCards()}
         </Grid>

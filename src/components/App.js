@@ -43,7 +43,7 @@ class App extends React.Component {
       return (
         <div
           style={{
-            width: "100vw",
+            width: "95vw",
             height: "100vh",
             display: "flex",
             justifyContent: "center",

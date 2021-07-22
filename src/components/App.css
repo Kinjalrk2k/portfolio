@@ -1,3 +1,11 @@
+html,
+body {
+  width: 95vw;
+  /* display: flex; */
+  /* justify-content: center; */
+  margin: auto;
+}
+
 .section {
   margin-top: 2rem;
 }
