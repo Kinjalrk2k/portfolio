@@ -1,0 +1,15 @@
+{
+  "short_name": "Portfolio",
+  "name": "Kinjal Raykarmakar's Porfolio Site!",
+  "icons": [
+    {
+      "src": "icon.jpeg",
+      "type": "image/jpeg",
+      "sizes": "600x600"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
