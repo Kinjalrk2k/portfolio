@@ -34,9 +34,9 @@ class WorkExperience extends React.Component {
   }
 
   renderDetailsList(details, color) {
-    return details.map((detail) => {
+    return details.map((detail, idx) => {
       return (
-        <ListItem color={color}>
+        <ListItem color={color} key={idx}>
           <ListIcon as={MdCheckCircle} color="green.500" />
           {detail}
         </ListItem>
@@ -45,17 +45,19 @@ class WorkExperience extends React.Component {
   }
 
   renderTech(tech) {
-    return tech.map((t) => {
+    return tech.map((t, idx) => {
       return (
-        <div style={{ marginLeft: "15px" }}>{React.createElement(si[t])}</div>
+        <div key={idx} style={{ marginLeft: "15px" }}>
+          {React.createElement(si[t])}
+        </div>
       );
     });
   }
 
   renderPositionList(work, color) {
-    return work.positions.map((pos) => {
+    return work.positions.map((pos, idx) => {
       return (
-        <div>
+        <div key={idx}>
           <Text fontSize="xl" color="#718096">
             {pos.designation}
             <br />
@@ -105,6 +107,7 @@ class WorkExperience extends React.Component {
           contentStyle={{ backgroundColor: "#171923" }}
           iconStyle={{ background: "#171923", color: "#fff" }}
           icon={<MdWork />}
+          key={idx}
         >
           <div style={{ marginBottom: "15px" }}>
             <Flex alignItems="center">
@@ -135,7 +138,7 @@ class WorkExperience extends React.Component {
   }
 
   render() {
-    console.log(this.props.workExperience);
+    // console.log(this.props.workExperience);
     return (
       <div>
         <CommentedHeading body="Work Experience" />

@@ -18,9 +18,9 @@ import { MdCheckCircle } from "react-icons/md";
 
 class VolunteerExperience extends React.Component {
   renderDetails(details) {
-    return details.map((detail) => {
+    return details.map((detail, idx) => {
       return (
-        <ListItem>
+        <ListItem key={idx}>
           <ListIcon as={MdCheckCircle} color="green.500" />
           {detail}
         </ListItem>
@@ -35,6 +35,7 @@ class VolunteerExperience extends React.Component {
           rowSpan={1}
           colSpan={{ base: 3, md: idx === 0 ? 2 : 1 }}
           marginTop={{ base: "1rem", md: "initial" }}
+          key={idx}
         >
           <Box
             borderWidth="3px"

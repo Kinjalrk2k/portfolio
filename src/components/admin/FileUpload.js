@@ -30,7 +30,7 @@ class FileUpload extends React.Component {
 
   handleFileUpload = async (e, setFieldValue) => {
     const file = e.target.files[0];
-    console.log(file);
+    // console.log(file);
     const storageRef = storage.ref();
     const spaceRef = storageRef.child(`images/${file.name}-${Date.now()}`);
 

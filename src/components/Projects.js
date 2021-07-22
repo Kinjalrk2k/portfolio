@@ -28,7 +28,7 @@ class Projects extends React.Component {
     return this.props.projects.map((project, idx) => {
       const colorIdx = Math.floor(Math.random() * (headingColors.length - 1));
       return (
-        <div>
+        <div key={idx}>
           {/* <LinkBox> */}
           <LinkBox as="address" p="3" m="3" borderRadius="lg">
             <div style={{ display: "flex", justifyContent: "center" }}>

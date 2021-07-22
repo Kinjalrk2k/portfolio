@@ -19,7 +19,7 @@ export const signIn = (email, password) => async (dispatch) => {
 
 export const alreadySignedIn = () => async (dispatch) => {
   auth.onAuthStateChanged((user) => {
-    console.log(user);
+    // console.log(user);
 
     if (user) {
       dispatch({

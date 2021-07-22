@@ -30,15 +30,15 @@ class AdminAbout extends React.Component {
   }
 
   handleSubmit = async (values, actions) => {
-    console.log(this.fileURLRef.current.value);
-    console.log({ ...values, profilePic: this.fileURLRef.current.value });
+    // console.log(this.fileURLRef.current.value);
+    // console.log({ ...values, profilePic: this.fileURLRef.current.value });
     await this.props.editAbout(values);
     actions.setSubmitting(false);
   };
 
   handleFileUpload = async (e, setFieldValue) => {
     const file = e.target.files[0];
-    console.log(file);
+    // console.log(file);
     const storageRef = storage.ref();
     const spaceRef = storageRef.child(`images/${file.name}-${Date.now()}`);
 
@@ -151,7 +151,7 @@ class AdminAbout extends React.Component {
   }
 
   render() {
-    console.log(this.props);
+    // console.log(this.props);
     if (this.props.about) {
       return (
         <Box p="6" m={3} borderWidth={2} borderRadius={10}>

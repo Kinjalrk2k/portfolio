@@ -27,7 +27,7 @@ function Contact() {
     e.target.checkValidity();
     e.target.reportValidity();
 
-    console.log(e);
+    // console.log(e);
     if (
       name === "" ||
       !emailRe.test(String(email).toLowerCase()) ||
