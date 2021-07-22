@@ -14,6 +14,7 @@ import VolunteerExperience from "./VolunteerExperience";
 
 import "./App.css";
 import Projects from "./Projects";
+import Contact from "./Contact";
 
 class App extends React.Component {
   componentDidMount() {
@@ -31,6 +32,7 @@ class App extends React.Component {
           <VolunteerExperience />
           {/* <Certificates /> */}
           <Projects />
+          <Contact />
         </Container>
       );
     } else {

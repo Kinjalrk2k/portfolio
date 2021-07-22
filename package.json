@@ -12,6 +12,7 @@
     "@testing-library/user-event": "^12.7.3",
     "chart.js": "^2.9.4",
     "chartjs-plugin-labels": "^1.1.0",
+    "emailjs-com": "^3.2.0",
     "firebase": "^8.3.0",
     "formik": "^2.2.6",
     "framer-motion": "^3.10.3",
