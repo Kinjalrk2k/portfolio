@@ -8,6 +8,9 @@ const CommentedHeading = (props) => {
       align={{ base: "center", md: "left" }}
       mb={5}
       mt={10}
+      fontSize="lg"
+      // as="i"
+      style={{ fontWeight: 800 }}
     >
       /* {props.body} */
     </Text>

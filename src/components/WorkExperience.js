@@ -38,10 +38,10 @@ class WorkExperience extends React.Component {
     return null;
   }
 
-  renderDetailsList(details) {
+  renderDetailsList(details, color) {
     return details.map((detail) => {
       return (
-        <ListItem>
+        <ListItem color={color}>
           <ListIcon as={MdCheckCircle} color="green.500" />
           {detail}
         </ListItem>
@@ -57,7 +57,7 @@ class WorkExperience extends React.Component {
     });
   }
 
-  renderPositionList(work) {
+  renderPositionList(work, color) {
     return work.positions.map((pos) => {
       return (
         <div>
@@ -68,7 +68,7 @@ class WorkExperience extends React.Component {
           </Text>
 
           <List spacing={1} fontSize={14} mt={3} mb={3}>
-            {this.renderDetailsList(pos.details)}
+            {this.renderDetailsList(pos.details, color)}
           </List>
 
           <Heading
@@ -86,7 +86,23 @@ class WorkExperience extends React.Component {
   }
 
   renderWorkList() {
-    return this.props.workExperience.map((work) => {
+    const headingColors = [
+      "cyan.300",
+      "green.300",
+      "blue.300",
+      "yellow.300",
+      "purple.300",
+    ];
+
+    const detailsColors = [
+      "cyan.100",
+      "green.100",
+      "blue.100",
+      "yellow.100",
+      "purple.100",
+    ];
+
+    return this.props.workExperience.map((work, idx) => {
       return (
         <VerticalTimelineElement
           className="vertical-timeline-element"
@@ -103,14 +119,21 @@ class WorkExperience extends React.Component {
                 boxSize="40px"
                 src={work.logo}
               />
-              <Heading as="h3" size="lg">
+              <Heading
+                as="h3"
+                size="lg"
+                color={headingColors[idx % headingColors.length]}
+              >
                 {work.organization}
                 {this.onGoingBadge(work)}
               </Heading>
             </Flex>
           </div>
 
-          {this.renderPositionList(work)}
+          {this.renderPositionList(
+            work,
+            detailsColors[idx % headingColors.length]
+          )}
         </VerticalTimelineElement>
       );
     });

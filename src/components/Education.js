@@ -20,17 +20,21 @@ const Education = (props) => {
           <Box display="flex" mb={3}>
             <h1 className="eduLogo">
               <FaSchool
-                style={{ fontSize: "xxx-large", marginRight: "30px" }}
+                style={{
+                  fontSize: "xxx-large",
+                  marginRight: "30px",
+                  color: "#805AD5",
+                }}
               />
             </h1>
-            <Heading as="h3" size="lg">
+            <Heading as="h3" size="lg" color="purple.500">
               {props.education.school.name}
             </Heading>
           </Box>
           <Text color="gray.500" mb={2}>
             {props.education.school.period}
           </Text>
-          <Text>{props.education.school.details}</Text>
+          <Text color="purple.100">{props.education.school.details}</Text>
         </Box>
 
         <Spacer />
@@ -48,19 +52,25 @@ const Education = (props) => {
 
         <Box w={{ base: "100%", md: "40%" }}>
           <Box display="flex" mb={3}>
-            <Heading as="h3" size="lg" textAlign="right">
+            <Heading as="h3" size="lg" textAlign="right" color="pink.500">
               {props.education.college.name}
             </Heading>
             <h1 className="eduLogo">
               <FaUniversity
-                style={{ fontSize: "xxx-large", marginLeft: "30px" }}
+                style={{
+                  fontSize: "xxx-large",
+                  marginLeft: "30px",
+                  color: "#D53F8C",
+                }}
               />
             </h1>
           </Box>
           <Text textAlign="right" color="gray.500" mb={2}>
             {props.education.college.period}
           </Text>
-          <Text textAlign="right">{props.education.college.details}</Text>
+          <Text color="pink.100" textAlign="right">
+            {props.education.college.details}
+          </Text>
         </Box>
       </Flex>
     </div>

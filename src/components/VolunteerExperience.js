@@ -46,7 +46,7 @@ class VolunteerExperience extends React.Component {
           >
             <Flex alignItems="center">
               <Image mr={2} borderRadius="full" boxSize="40px" src={vE.logo} />
-              <Heading as="h4" size="md">
+              <Heading as="h4" size="md" color="blue.200">
                 {vE.organization}
               </Heading>
             </Flex>

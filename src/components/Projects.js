@@ -9,7 +9,24 @@ import { FaGithub } from "react-icons/fa";
 
 class Projects extends React.Component {
   renderSlide() {
-    return this.props.projects.map((project) => {
+    const headingColors = [
+      "cyan.300",
+      "green.300",
+      "blue.300",
+      "yellow.300",
+      "purple.300",
+    ];
+
+    const detailsColors = [
+      "cyan.50",
+      "green.50",
+      "blue.50",
+      "yellow.50",
+      "purple.50",
+    ];
+
+    return this.props.projects.map((project, idx) => {
+      const colorIdx = Math.floor(Math.random() * (headingColors.length - 1));
       return (
         <div>
           {/* <LinkBox> */}
@@ -19,8 +36,8 @@ class Projects extends React.Component {
             </div>
             <LinkOverlay href={project.link}>
               <Box p="6">
-                <Box>{project.title}</Box>
-                <Box ml="2" color="gray.600" fontSize="sm">
+                <Box color={headingColors[colorIdx]}>{project.title}</Box>
+                <Box ml="2" color={detailsColors[colorIdx]} fontSize="sm">
                   {project.description}
                 </Box>
               </Box>
