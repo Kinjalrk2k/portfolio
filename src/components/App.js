@@ -17,6 +17,7 @@ import Projects from "./Projects";
 import Contact from "./Contact";
 import Socials from "./Social";
 import Footer from "./Footer";
+import Background from "./Background";
 
 class App extends React.Component {
   componentDidMount() {
@@ -26,18 +27,21 @@ class App extends React.Component {
   render() {
     if (this.props.data) {
       return (
-        <Container maxW="container.lg" marginTop={5}>
-          <About />
-          <Education />
-          <Skills />
-          <WorkExperience />
-          <VolunteerExperience />
-          {/* <Certificates /> */}
-          <Projects />
-          <Contact />
-          <Socials />
-          <Footer />
-        </Container>
+        <>
+          <Background />
+          <Container maxW="container.lg" marginTop={5}>
+            <About />
+            <Education />
+            <Skills />
+            <WorkExperience />
+            <VolunteerExperience />
+            {/* <Certificates /> */}
+            <Projects />
+            <Contact />
+            <Socials />
+            <Footer />
+          </Container>
+        </>
       );
     } else {
       return (
