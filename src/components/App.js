@@ -16,6 +16,7 @@ import "./App.css";
 import Projects from "./Projects";
 import Contact from "./Contact";
 import Socials from "./Social";
+import Footer from "./Footer";
 
 class App extends React.Component {
   componentDidMount() {
@@ -35,6 +36,7 @@ class App extends React.Component {
           <Projects />
           <Contact />
           <Socials />
+          <Footer />
         </Container>
       );
     } else {

@@ -38,12 +38,12 @@ class Projects extends React.Component {
       speed: 500,
       slidesToShow: 2,
       slidesToScroll: 2,
-      adaptiveHeight: true,
+      adaptiveHeight: false,
       autoplay: true,
       autoplaySpeed: 4000,
       responsive: [
         {
-          breakpoint: 1024,
+          breakpoint: 1000,
           settings: {
             slidesToShow: 3,
             slidesToScroll: 3,
@@ -56,6 +56,8 @@ class Projects extends React.Component {
           settings: {
             slidesToShow: 2,
             slidesToScroll: 2,
+            infinite: true,
+            dots: true,
           },
         },
         {
@@ -63,6 +65,8 @@ class Projects extends React.Component {
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1,
+            infinite: true,
+            dots: true,
           },
         },
       ],
