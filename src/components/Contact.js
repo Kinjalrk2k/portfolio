@@ -11,7 +11,7 @@ import {
 import React, { useState } from "react";
 import CommentedHeading from "./partials/CommentedHeading";
 import emailjs from "emailjs-com";
-import emailconfig from "../emailconfig";
+// import emailconfig from "../emailconfig";
 
 function Contact() {
   const [name, setName] = useState("");
@@ -42,22 +42,22 @@ function Contact() {
       email,
     };
 
-    emailjs
-      .send(
-        emailconfig.SERVICE_ID,
-        emailconfig.TEMPLATE_ID,
-        payload,
-        emailconfig.USER_ID
-      )
-      .then((res) => {
-        setSendBtnText("Message sent!");
-        setEmail("");
-        setName("");
-        setMessage("");
-      })
-      .catch((err) => {
-        setSendBtnText("Failed to send! :(");
-      });
+    // emailjs
+    //   .send(
+    //     emailconfig.SERVICE_ID,
+    //     emailconfig.TEMPLATE_ID,
+    //     payload,
+    //     emailconfig.USER_ID
+    //   )
+    //   .then((res) => {
+    //     setSendBtnText("Message sent!");
+    //     setEmail("");
+    //     setName("");
+    //     setMessage("");
+    //   })
+    //   .catch((err) => {
+    //     setSendBtnText("Failed to send! :(");
+    //   });
   };
 
   return (
