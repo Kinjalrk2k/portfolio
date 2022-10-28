@@ -35,9 +35,9 @@ class Projects extends React.Component {
               <Image src={project.image} maxHeight="250px" />
             </div>
             <LinkOverlay href={project.link}>
-              <Box p="6">
+              <Box p="1">
                 <Box color={headingColors[colorIdx]}>{project.title}</Box>
-                <Box ml="2" color={detailsColors[colorIdx]} fontSize="sm">
+                <Box color={detailsColors[colorIdx]} fontSize="sm">
                   {project.description}
                 </Box>
               </Box>
@@ -51,6 +51,7 @@ class Projects extends React.Component {
 
   render() {
     const sliderSettings = {
+      lazyLoad: "ondemand",
       dots: true,
       speed: 500,
       slidesToShow: 2,

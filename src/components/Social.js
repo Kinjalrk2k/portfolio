@@ -20,7 +20,7 @@ function Socials() {
           color: "gray",
         }}
       >
-        <Link className="social-icon" href="https://kinjal.co">
+        <Link className="social-icon" href="/">
           <HiHome />
         </Link>
         <Link
@@ -37,7 +37,7 @@ function Socials() {
         </Link>
         <Link
           className="social-icon"
-          href="https://www.instagram.com/kinjal.raykarmakar"
+          href="https://www.instagram.com/kinjalrk2k/"
         >
           <GrInstagram />
         </Link>

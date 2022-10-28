@@ -17,18 +17,23 @@ const About = (props) => {
   return (
     <div>
       <CommentedHeading body="About Me" />
-      <Flex direction={{ base: "column", md: "row" }}>
-        <Box order={{ base: 2, md: 0 }}>
+      <Flex direction={{ base: "column" }}>
+        <Box order={{ base: 2 }}>
           <Heading
             as="h1"
             size="2xl"
             color="orange.500"
             mt="2"
-            textAlign={{ base: "center", md: "left" }}
+            textAlign={{ base: "center" }}
           >
             {props.about.name}
           </Heading>
-          <Heading color="green.400" mt="3" mb="5">
+          <Heading
+            color="green.400"
+            mt="3"
+            mb="5"
+            textAlign={{ base: "center" }}
+          >
             {props.about.designation}
           </Heading>
           <Text color="red.100" align="justify">
@@ -39,9 +44,10 @@ const About = (props) => {
         <Center w="100%">
           <Image
             borderRadius="full"
-            boxSize="150px"
+            boxSize="300px"
             src={props.about.profilePic}
             alt={props.about.name}
+            style={{ zIndex: 100 }}
           />
         </Center>
       </Flex>
