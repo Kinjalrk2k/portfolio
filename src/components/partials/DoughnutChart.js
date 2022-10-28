@@ -37,8 +37,8 @@ const DoughnutChart = (props) => {
       <Doughnut
         data={data}
         options={{
-          rotation: 1 * Math.PI,
-          circumference: 1 * Math.PI,
+          rotation: 0.75 * Math.PI,
+          circumference: 1.5 * Math.PI,
           title: {
             display: true,
             position: "bottom",
@@ -47,9 +47,10 @@ const DoughnutChart = (props) => {
             fontFamily: "Jetbrains Mono",
             fontColor: "#fff",
           },
-          cutoutPercentage: 50,
+          cutoutPercentage: 40,
           plugins: {
             labels: {
+              position: "top",
               render: "label",
               fontColor: function (data) {
                 var rgb = hexToRgb(data.dataset.backgroundColor[data.index]);
@@ -57,8 +58,9 @@ const DoughnutChart = (props) => {
                 var luminance = 0.299 * rgb.r + 0.587 * rgb.g + 0.114 * rgb.b;
                 return luminance > threshold ? "black" : "white";
               },
+              fontSize: 15,
+              fontFamily: "Jetbrains Mono",
             },
-            fontFamily: "Jetbrains Mono",
             position: "outside",
           },
           tooltips: {

@@ -33,7 +33,7 @@ class VolunteerExperience extends React.Component {
       return (
         <GridItem
           rowSpan={1}
-          colSpan={{ base: 3, md: idx === 0 ? 2 : 1 }}
+          colSpan={{ base: 3, md: idx === 0 || idx === 1 ? 2 : 1, sm: 2 }}
           marginTop={{ base: "1rem", md: "initial" }}
           key={idx}
         >
@@ -66,7 +66,7 @@ class VolunteerExperience extends React.Component {
 
         <Grid
           templateRows="repeat(2, 1fr)"
-          templateColumns="repeat(3, 1fr)"
+          templateColumns="repeat(4, 1fr)"
           gap={4}
           display={{ base: "initial", md: "grid" }}
         >

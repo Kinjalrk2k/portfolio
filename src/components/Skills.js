@@ -12,9 +12,9 @@ const Skills = (props) => {
       <CommentedHeading body="Skills" />
       <Wrap style={{ justifyContent: "center" }}>
         <DoughnutChart dataObj={props.skills.backend} chartName={"Backend"} />
+        <DoughnutChart dataObj={props.skills.cloud} chartName={"Cloud"} />
         <DoughnutChart dataObj={props.skills.database} chartName={"Database"} />
         <DoughnutChart dataObj={props.skills.frontend} chartName={"Frontend"} />
-        <DoughnutChart dataObj={props.skills.python} chartName={"Python"} />
         <DoughnutChart dataObj={props.skills.others} chartName={"Others"} />
       </Wrap>
     </div>
