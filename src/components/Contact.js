@@ -10,7 +10,7 @@ import {
 } from "@chakra-ui/react";
 import React, { useState } from "react";
 import CommentedHeading from "./partials/CommentedHeading";
-import emailjs from "emailjs-com";
+import axios from "axios";
 // import emailconfig from "../emailconfig";
 
 function Contact() {
@@ -37,27 +37,34 @@ function Contact() {
     }
 
     const payload = {
-      from_name: name,
+      name,
       message,
       email,
     };
 
-    // emailjs
-    //   .send(
-    //     emailconfig.SERVICE_ID,
-    //     emailconfig.TEMPLATE_ID,
-    //     payload,
-    //     emailconfig.USER_ID
-    //   )
-    //   .then((res) => {
-    //     setSendBtnText("Message sent!");
-    //     setEmail("");
-    //     setName("");
-    //     setMessage("");
-    //   })
-    //   .catch((err) => {
-    //     setSendBtnText("Failed to send! :(");
-    //   });
+    axios
+      .post(
+        "https://lwlyftvjxhrworihykpd.supabase.co/rest/v1/contact",
+        payload,
+        {
+          headers: {
+            apikey: process.env.REACT_APP_SUPABASE_KEY,
+            Authorization: `Bearer ${process.env.REACT_APP_SUPABASE_KEY}`,
+            "Content-Type": "application/json",
+            Prefer: "return=representation",
+          },
+        }
+      )
+      .then((res) => {
+        setSendBtnText("Message sent!");
+        setEmail("");
+        setName("");
+        setMessage("");
+      })
+      .catch((err) => {
+        console.log(err);
+        setSendBtnText("Failed to send! :(");
+      });
   };
 
   return (

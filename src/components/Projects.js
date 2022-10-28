@@ -58,7 +58,7 @@ class Projects extends React.Component {
       slidesToScroll: 2,
       adaptiveHeight: false,
       autoplay: true,
-      autoplaySpeed: 4000,
+      autoplaySpeed: 5000,
       responsive: [
         {
           breakpoint: 1000,
