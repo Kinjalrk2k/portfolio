@@ -18,6 +18,7 @@ import Contact from "./Contact";
 import Socials from "./Social";
 import Footer from "./Footer";
 import Background from "./Background";
+import Documents from "./Documents";
 
 class App extends React.Component {
   componentDidMount() {
@@ -37,6 +38,7 @@ class App extends React.Component {
             <VolunteerExperience />
             {/* <Certificates /> */}
             <Projects />
+            <Documents />
             <Contact />
             <Socials />
             <Footer />
