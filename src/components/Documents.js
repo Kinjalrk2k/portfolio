@@ -8,7 +8,7 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 
 const Documents = (props) => {
   return (
-    <div>
+    <div id="documents">
       <CommentedHeading body="Documents" />
       {props.documents.map((document) => (
         <Flex direction={{ base: "row" }} justifyContent="center">

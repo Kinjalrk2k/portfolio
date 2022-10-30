@@ -15,7 +15,7 @@ import CommentedHeading from "./partials/CommentedHeading";
 
 const About = (props) => {
   return (
-    <div>
+    <div id="about">
       <CommentedHeading body="About Me" />
       <Flex direction={{ base: "column" }}>
         <Box order={{ base: 2 }}>

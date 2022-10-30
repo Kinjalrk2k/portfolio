@@ -37,3 +37,28 @@ body {
 .social-icon:hover {
   color: antiquewhite;
 }
+
+/* scrollbar */
+/* width */
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #2a2929;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #b693f4;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #965ef6;
+}

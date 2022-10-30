@@ -8,7 +8,7 @@ import { Wrap } from "@chakra-ui/react";
 
 const Skills = (props) => {
   return (
-    <div className="section">
+    <div className="section" id="skills">
       <CommentedHeading body="Skills" />
       <Wrap style={{ justifyContent: "center" }}>
         <DoughnutChart dataObj={props.skills.backend} chartName={"Backend"} />

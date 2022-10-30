@@ -9,7 +9,7 @@ import { FaSchool, FaUniversity } from "react-icons/fa";
 
 const Education = (props) => {
   return (
-    <div className="section">
+    <div className="section" id="education">
       <CommentedHeading body="Education" />
       <Flex
         direction={{ base: "column", md: "row" }}

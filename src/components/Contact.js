@@ -68,7 +68,7 @@ function Contact() {
   };
 
   return (
-    <div>
+    <div id="contact">
       <CommentedHeading body="Get in Touch" />
 
       <form>

@@ -140,7 +140,7 @@ class WorkExperience extends React.Component {
   render() {
     // console.log(this.props.workExperience);
     return (
-      <div>
+      <div id="work-experience">
         <CommentedHeading body="Work Experience" />
         <VerticalTimeline animate={false}>
           {this.renderWorkList()}

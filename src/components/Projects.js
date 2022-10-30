@@ -91,7 +91,7 @@ class Projects extends React.Component {
     };
 
     return (
-      <div>
+      <div id="projects">
         <CommentedHeading body="Some of my Works" />
         <Slider {...sliderSettings}>
           {this.renderSlide()}

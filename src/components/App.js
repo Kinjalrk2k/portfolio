@@ -19,6 +19,7 @@ import Socials from "./Social";
 import Footer from "./Footer";
 import Background from "./Background";
 import Documents from "./Documents";
+import Menu from "./Menu";
 
 class App extends React.Component {
   componentDidMount() {
@@ -31,6 +32,7 @@ class App extends React.Component {
         <>
           <Background />
           <Container maxW="container.lg" marginTop={5}>
+            <Menu />
             <About />
             <Education />
             <Skills />
