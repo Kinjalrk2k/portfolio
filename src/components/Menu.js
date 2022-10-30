@@ -1,18 +1,7 @@
 import React from "react";
-import { connect } from "react-redux";
 
 import {
-  Heading,
-  Image,
   Flex,
-  Spacer,
-  Box,
-  Text,
-  Center,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  IconButton,
   Button,
   Drawer,
   DrawerOverlay,
@@ -22,7 +11,6 @@ import {
   DrawerBody,
   DrawerFooter,
   useDisclosure,
-  Input,
   Link,
 } from "@chakra-ui/react";
 
@@ -103,7 +91,9 @@ const Menu = (props) => {
         <DrawerOverlay />
         <DrawerContent>
           <DrawerCloseButton />
-          <DrawerHeader>Menu</DrawerHeader>
+          <DrawerHeader>
+            <CommentedHeading body="Menu" />
+          </DrawerHeader>
 
           <DrawerBody>
             <Flex direction="column" alignItems="flex-start">
